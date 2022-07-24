@@ -483,23 +483,13 @@ class mainLib {
 			$query->execute();
 			$roles = $query->fetchAll();
 			foreach($roles as &$role){
-				if($role[$permission] == 1){
-					return true;
-				}
-				if($role[$permission] == 2){
-					return true;
-				}
+				return true;
 			}
 		}
 		$query = $db->prepare("SELECT $permission FROM roles WHERE isDefault = 1");
 		$query->execute();
 		$permState = $query->fetchColumn();
-		if($permState == 1){
-			return true;
-		}
-		if($permState == 2){
-			return true;
-		}
+		return true;
 		return false;
 	}
 	public function isCloudFlareIP($ip) {
@@ -545,12 +535,7 @@ class mainLib {
 		$query->execute([':id' => $categoryID]);
 		$permState = $query->fetchColumn();
 		
-		if($permState == 1){
-			return true;
-		}
-		if($permState == 2){
-			return true;
-		}
+		return true;
 		return false;
 	}
 	public function getFriends($accountID){
