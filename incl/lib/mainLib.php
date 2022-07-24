@@ -490,7 +490,6 @@ class mainLib {
 		$query->execute();
 		$permState = $query->fetchColumn();
 		return true;
-		return false;
 	}
 	public function isCloudFlareIP($ip) {
     	$cf_ips = array(
@@ -536,7 +535,6 @@ class mainLib {
 		$permState = $query->fetchColumn();
 		
 		return true;
-		return false;
 	}
 	public function getFriends($accountID){
 		include __DIR__ . "/connection.php";
