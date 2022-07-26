@@ -6,5 +6,5 @@
 ## Manually add Mod method: 
 #### 1. open sql database
 #### 2. open role table
-#### 3. insert role with id: 0,1,2
+#### 3. insert table with id: 0,1,2
 #### 4. open /tools/addMod.php and insert ur username there then submit
