@@ -13,9 +13,6 @@ $gjp = ExploitPatch::remove($_POST["gjp"]);
 $rating = ExploitPatch::remove($_POST["rating"]);
 $levelID = ExploitPatch::remove($_POST["levelID"]);
 $id = GJPCheck::getAccountIDOrDie();
-if($gs->checkPermission($id, "actionRateDemon") == false){
-	exit("-1");
-}
 $auto = 0;
 $demon = 0;
 switch($rating){
